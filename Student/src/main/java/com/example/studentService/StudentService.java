@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.student.StudentModel;
 import com.example.studentRepo.StudentRepo;
 
@@ -20,5 +19,15 @@ public class StudentService {
 
 	public StudentModel post(StudentModel student) {
 		return repo.save(student);
+	}
+
+	public StudentModel put(StudentModel student) {
+		return repo.save(student);
+	}
+
+	public String deleteStudent(String name) {
+		List<StudentModel> list = repo.findByName(name);
+		repo.deleteAll(list);
+		return "deleted";
 	}
 }

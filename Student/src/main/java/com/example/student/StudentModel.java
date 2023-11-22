@@ -1,7 +1,12 @@
 package com.example.student;
 
-public class StudentModel {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+
+@Document(collection = "student")
+public class StudentModel {
+	@Id
 	private String name;
 	private int age;
 	private double salary;
@@ -11,7 +16,7 @@ public class StudentModel {
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
-		
+
 	}
 
 	public String getName() {
