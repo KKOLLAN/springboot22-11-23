@@ -15,20 +15,19 @@ import com.example.student.StudentModel;
 import com.example.studentService.StudentService;
 
 @WebMvcTest(value = StudentService.class)
-	public class StudentTest {
-		@Autowired
-		MockMvc mockMvc;
-		@MockBean
-		StudentService studentService;
-		
-		
-		@Test
-		void testGetByName() {
-			
-			List<StudentModel> list = new ArrayList<>();
-	 
-			StudentModel student = new StudentModel("Kiran", 25, 320000);
-			list.add(student);
-			when(studentService.findByName("Kiran")).thenReturn(list);
-		}
+public class StudentTest {
+	@Autowired
+	MockMvc mockMvc;
+	@MockBean
+	StudentService studentService;
+
+	@Test
+	void testGetByName() {
+
+		List<StudentModel> list = new ArrayList<>();
+
+		StudentModel student = new StudentModel("Kiran", 25, 320000);
+		list.add(student);
+		when(studentService.findByName("Kiran")).thenReturn(list);
+	}
 }
