@@ -11,6 +11,7 @@ public class StudentModel {
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
+		
 	}
 
 	public String getName() {
