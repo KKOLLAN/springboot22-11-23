@@ -1,7 +1,6 @@
 package com.example.studentController;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,15 +30,16 @@ public class StudentController {
 	public StudentModel post(@RequestBody StudentModel student) {
 		return studentService.post(student);
 	}
+
 	@PutMapping("/put")
 	public StudentModel put(@RequestBody StudentModel student) {
 		return studentService.put(student);
 	}
+
 	@DeleteMapping("/delete")
-	public String removeStudent(String name)
-	{
+	public String removeStudent(String name) {
 		return studentService.deleteStudent(name);
-		
+
 	}
-	
+
 }
