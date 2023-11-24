@@ -1,0 +1,16 @@
+package com.vamsi.restfullwebservices.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.vamsi.restfullwebservices.entity.User;
+import com.vamsi.restfullwebservices.service.UserService;
+@Service
+public class UserServiceimpl implements UserService {
+
+	@Override
+	public User createUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
