@@ -1,0 +1,14 @@
+package net.com.departmentservice.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.Value;
+
+@RestController
+public class MessageController {
+	
+	
+	@org.springframework.beans.factory.annotation.Value("${spring boot.message}")
+	private String messgae;
+
+}
